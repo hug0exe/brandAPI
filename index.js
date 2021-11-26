@@ -12,7 +12,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 // defining the actual app to handle the requests (e.g. push, get, etc.)
 const app = express()
-const port = 3306
+const port = 3000
 // require the driver to connect to the database
 const mongoose = require('mongoose')
 // require the class constructor from different file
@@ -150,7 +150,7 @@ app.delete('/brand/:id', (req, res) => {
 //start the server
 app.listen(port, () => {
   //change the link to your database
-  mongoose.connect('mongodb+srv://admin:<password>@brandapi.yvwcf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority').
+  mongoose.connect('mongodb+srv://admin:admin@brandapi.yvwcf.mongodb.net/brandAPI?retryWrites=true&w=majority').
   catch(error => console.log(error));
   console.log(`Example app listening at http://localhost:${port}`)
 })
