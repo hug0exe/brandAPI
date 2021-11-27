@@ -84,7 +84,8 @@ app.post('/brand', (req, res) => {
     age: parseInt(req.body.age), //Number
     name: req.body.name, //String
     type: req.body.type || "No type inserted", //String
-    isEcoResp: isEcoResp //Boolean
+    isEcoResp: isEcoResp, //Boolean
+    leadArticle: req.body.leadArticle
   });
   //inserting a brand and checking to see if any errors occured
   brand.save(err => {
@@ -118,7 +119,8 @@ app.put('/brand/:id', (req, res) => {
     name: req.body.name,
     age: ((parseInt(req.body.age) == NaN) ? 0 : parseInt(req.body.age)),
     type: req.body.type,
-    isEcoResp: (req.body.isEcoResp === 'true')
+    isEcoResp: (req.body.isEcoResp === 'true'),
+    leadArticle: req.body.leadArticle
   }, err => {
     if (err) {
       res.send("It didn't edit. The error is: " + err)

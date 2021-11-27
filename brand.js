@@ -7,7 +7,8 @@ const brandSchema = new Schema({
     age : Number, // Decimal128 // String
     name: String,
     type: String,
-    isEcoResp: Boolean
+    isEcoResp: Boolean,
+    leadArticle: Array
   })
 //defining the name of the constructor for our class
 const Brand = mongoose.model('Brand', brandSchema);
