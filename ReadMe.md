@@ -4,7 +4,8 @@
 
 to run this app :
 
-```npm install
+```bash
+npm install
 ```
 
 # BrandAPI
